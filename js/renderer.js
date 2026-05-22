@@ -128,7 +128,7 @@ function drawMarkers(ctx, corners, markers) {
 
 function drawMarkerCoordinates(ctx, markers) {
 
-  const panelX = 20;
+  const panelX = 30;
   const panelY = 20;
 
   const lineHeight = 24;
@@ -136,10 +136,10 @@ function drawMarkerCoordinates(ctx, markers) {
   ctx.fillStyle = 'rgba(0,0,0,0.7)';
 
   ctx.fillRect(
-    panelX - 10,
-    panelY - 10,
-    260,
-    (markers.length * lineHeight) + 20
+	panelX - 10,
+	panelY - 10,
+	380,
+	(markers.length * lineHeight) + 20
   );
 
   ctx.fillStyle = 'white';
