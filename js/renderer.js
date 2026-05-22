@@ -89,8 +89,8 @@ function drawCenterZone(ctx, corners) {
 
     const angle = (Math.PI * 2 * i) / steps;
 
-    const x = 18 + Math.cos(angle) * 12;
-    const y = 18 + Math.sin(angle) * 12;
+    const x = 24 + Math.cos(angle) * 12;
+    const y = 24 + Math.sin(angle) * 12;
 
     const p = projectPoint(corners, x, y);
 
