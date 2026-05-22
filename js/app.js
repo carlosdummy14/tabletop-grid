@@ -9,12 +9,34 @@ const ctx = canvas.getContext('2d');
 const startCameraBtn = document.getElementById('startCameraBtn');
 const generateBtn = document.getElementById('generateBtn');
 const resetCornersBtn = document.getElementById('resetCornersBtn');
+const toggleControlsBtn = document.getElementById('toggleControlsBtn');
+const controls = document.getElementById('controls');
 
 let markers = [];
 
 let corners = [];
 
 let draggingCorner = null;
+
+let controlsVisible = true;
+
+toggleControlsBtn.addEventListener('click', () => {
+
+  controlsVisible = !controlsVisible;
+
+  if (controlsVisible) {
+
+    controls.classList.remove('hidden');
+
+    toggleControlsBtn.textContent = 'Ocultar UI';
+
+  } else {
+
+    controls.classList.add('hidden');
+
+    toggleControlsBtn.textContent = 'Mostrar UI';
+  }
+});
 
 function initializeCorners() {
 
