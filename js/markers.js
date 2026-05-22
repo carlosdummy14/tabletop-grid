@@ -1,4 +1,8 @@
-const GRID_SIZE = 36;
+#const GRID_SIZE = 36;
+const TABLE_SIZE = 48;
+const PLAY_AREA_SIZE = 36;
+
+const PLAY_OFFSET = 6;
 const CENTER_RADIUS = 12;
 const MIN_DISTANCE = 1;
 const PLAYER_DISTANCE = 12;
@@ -65,15 +69,15 @@ function randomPointInsideCenter() {
 
   while (true) {
 
-    const x = Math.random() * GRID_SIZE;
-    const y = Math.random() * GRID_SIZE;
+    const x = PLAY_OFFSET + (Math.random() * PLAY_AREA_SIZE);
+    const y = PLAY_OFFSET + (Math.random() * PLAY_AREA_SIZE);
 
-    const dx = x - 18;
-    const dy = y - 18;
+    const dx = x - 24;
+    const dy = y - 24;
 
     const dist = Math.sqrt(dx * dx + dy * dy);
 
-    if (dist <= CENTER_RADIUS) {
+    if (dist <= 12) {
       return { x, y };
     }
   }

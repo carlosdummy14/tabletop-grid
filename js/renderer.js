@@ -1,5 +1,9 @@
-const GRID_SIZE = 36;
-const GRID_DIVISIONS = 12;
+#const GRID_SIZE = 36;
+#const GRID_DIVISIONS = 12;
+const TABLE_SIZE = 48;
+const PLAY_AREA_SIZE = 36;
+
+const GRID_DIVISIONS = 48;
 
 export function renderScene(ctx, canvas, corners, markers) {
 
@@ -22,8 +26,10 @@ function interpolate(p1, p2, t) {
 
 function projectPoint(corners, x, y) {
 
-  const u = x / GRID_SIZE;
-  const v = y / GRID_SIZE;
+  #const u = x / GRID_SIZE;
+  #const v = y / GRID_SIZE;
+  const u = x / TABLE_SIZE;
+  const v = y / TABLE_SIZE;
 
   const top = interpolate(corners[0], corners[1], u);
   const bottom = interpolate(corners[3], corners[2], u);
