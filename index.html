@@ -2,21 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  />
+
   <title>AR Battlefield Overlay</title>
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
 
-  <video id="video" autoplay playsinline></video>
+  <!-- VIDEO -->
+  <video
+    id="video"
+    autoplay
+    playsinline
+  ></video>
 
+  <!-- OVERLAY -->
   <canvas id="overlay"></canvas>
 
+  <!-- FLOATING TOGGLE -->
   <button id="toggleControlsBtn">
     Ocultar UI
   </button>
 
+  <!-- CONTROLS -->
   <div id="controls">
 
     <button id="startCameraBtn">
