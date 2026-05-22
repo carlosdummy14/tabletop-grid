@@ -12,6 +12,8 @@ export function renderScene(ctx, canvas, corners, markers) {
   drawCenterZone(ctx, corners);
   drawMarkers(ctx, corners, markers);
   drawCorners(ctx, corners);
+  
+  drawMarkerCoordinates(ctx, markers);
 }
 
 function interpolate(p1, p2, t) {
@@ -124,6 +126,55 @@ function drawMarkers(ctx, corners, markers) {
   });
 }
 
+function drawMarkerCoordinates(ctx, markers) {
+
+  const panelX = 20;
+  const panelY = 20;
+
+  const lineHeight = 24;
+
+  ctx.fillStyle = 'rgba(0,0,0,0.7)';
+
+  ctx.fillRect(
+    panelX - 10,
+    panelY - 10,
+    260,
+    (markers.length * lineHeight) + 20
+  );
+
+  ctx.fillStyle = 'white';
+
+  ctx.font = '16px Arial';
+
+  markers.forEach((marker, index) => {
+
+    const left = Math.ceil(marker.x);
+	const right = Math.ceil(48 - marker.x);
+
+	const top = Math.ceil(marker.y);
+	const bottom = Math.ceil(48 - marker.y);
+
+    const nearestX =
+      marker.x <= 24
+        ? `${left}" izquierda`
+        : `${right}" derecha`;
+
+    const nearestY =
+      marker.y <= 24
+        ? `${top}" arriba`
+        : `${bottom}" abajo`;
+
+    const text =
+      `${marker.label}: ${nearestX} / ${nearestY}`;
+
+    ctx.fillText(
+      text,
+      panelX,
+      panelY + (index * lineHeight)
+    );
+  });
+}
+
 function drawCorners(ctx, corners) {
 
   corners.forEach((corner, index) => {
@@ -140,3 +191,4 @@ function drawCorners(ctx, corners) {
     ctx.fillText(index + 1, corner.x - 4, corner.y + 5);
   });
 }
+
