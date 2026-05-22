@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AR Battlefield Overlay</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <video id="video" autoplay playsinline></video>
+
+  <canvas id="overlay"></canvas>
+
+  <div id="controls">
+
+    <button id="startCameraBtn">
+      Activar Cámara
+    </button>
+
+    <button id="generateBtn">
+      Generar Marcadores
+    </button>
+
+    <button id="resetCornersBtn">
+      Reset Esquinas
+    </button>
+
+    <div class="info">
+      Arrastra las esquinas rojas para alinear la mesa.
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
