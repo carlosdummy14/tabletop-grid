@@ -145,6 +145,7 @@ function drawMarkerCoordinates(ctx, markers) {
   ctx.fillStyle = 'white';
 
   ctx.font = '16px Arial';
+  ctx.textAlign = 'left';
 
   markers.forEach((marker, index) => {
 
