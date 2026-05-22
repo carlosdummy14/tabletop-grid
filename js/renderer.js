@@ -128,7 +128,7 @@ function drawMarkers(ctx, corners, markers) {
 
 function drawMarkerCoordinates(ctx, markers) {
 
-  const panelX = 30;
+  const panelX = 20;
   const panelY = 20;
 
   const lineHeight = 24;
