@@ -1,8 +1,8 @@
-#const GRID_SIZE = 36;
 const TABLE_SIZE = 48;
 const PLAY_AREA_SIZE = 36;
 
 const PLAY_OFFSET = 6;
+
 const CENTER_RADIUS = 12;
 const MIN_DISTANCE = 1;
 const PLAYER_DISTANCE = 12;
